@@ -1,14 +1,14 @@
 package pr3;
 
 public class Square extends Rectangle {
-    Square() {}
+    public Square() {}
 
-    Square(double side) {
+    public Square(double side) {
         this.width = side;
         this.length = side;
     }
 
-    Square(double side, String color, boolean filled) {
+    public Square(double side, String color, boolean filled) {
         this.width = side;
         this.length = side;
         this.color = color;
