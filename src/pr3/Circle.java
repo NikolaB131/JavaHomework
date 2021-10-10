@@ -3,13 +3,13 @@ package pr3;
 public class Circle extends Shape {
     protected double radius;
 
-    Circle() {}
+    public Circle() {}
 
-    Circle(double radius) {
+    public Circle(double radius) {
         this.radius = radius;
     }
 
-    Circle(double radius, String color, boolean filled) {
+    public Circle(double radius, String color, boolean filled) {
         this.radius = radius;
         this.color = color;
         this.filled = filled;

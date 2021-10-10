@@ -4,14 +4,14 @@ public class Rectangle extends Shape {
     protected double width;
     protected double length;
 
-    Rectangle() {}
+    public Rectangle() {}
 
-    Rectangle(double width, double length) {
+    public Rectangle(double width, double length) {
         this.width = width;
         this.length = length;
     }
 
-    Rectangle(double width, double length, String color, boolean filled) {
+    public Rectangle(double width, double length, String color, boolean filled) {
         this.width = width;
         this.length = length;
         this.color = color;
