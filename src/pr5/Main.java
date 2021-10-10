@@ -6,12 +6,19 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("|Упражнение 3|\nВведите число A: ");
-        int A = in.nextInt();
+        int a = in.nextInt();
         System.out.print("Введите число B: ");
-        int B = in.nextInt();
-        AToB.start(A, B);
-        System.out.print("|Упражнение 14|\nВведите число N: ");
-        int N = in.nextInt();
+        int b = in.nextInt();
+        AToB.start(a, b);
+        System.out.print("\n|Упражнение 5|\nВведите число: ");
+        int n = in.nextInt();
+        System.out.print(SumOfDigits.start(n, 0));
+        System.out.print("\n|Упражнение 14|\nВведите число N: ");
+        n = in.nextInt();
+        DigitsLeftToRight.start(n);
+        System.out.print("\n|Упражнение 15|\nВведите число N: ");
+        n = in.nextInt();
+        DigitsRightToLeft.start(n);
         in.close();
     }
 }
