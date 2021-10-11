@@ -1,7 +1,7 @@
 package pr6;
 
 public class Student implements Comparable<Student> {
-    private int id;
+    private final int id;
 
     Student(int id) {
         this.id = id;

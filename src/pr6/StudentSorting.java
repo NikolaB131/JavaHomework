@@ -34,7 +34,7 @@ public class StudentSorting {
     }
 
     private static void merge(ArrayList<Student> n, ArrayList<Student> l, ArrayList<Student> r) {
-        int i = 0, j = 0, k = 0;
+        int i = 0, j = 0;
         // пока не дойдем до конца l или r, выбрать наименьший элемент из l[i] и r[j]
         // и поставить его на правильное место в основном массиве
         while (i < l.size() && j < r.size()) {
