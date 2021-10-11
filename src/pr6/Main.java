@@ -8,29 +8,34 @@ public class Main {
         ArrayList<Student> firstList = new ArrayList<>();
         ArrayList<Student> secondList = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
-//        System.out.println(s2.compareTo(s1) == 0);
-        System.out.print("|Заполнение первого списка студентов|\n00 - конец ввода\n" +
+        System.out.print("|Заполнение первого списка студентов|\nлюбое введенное не число - конец ввода\n" +
                 "Введите id студентов разделяя их пробелом: ");
         while (true) {
-            String id = scanner.nextLine();
-            if (id.equals("00")) {
+            if (scanner.hasNextInt()) {
+                int id = scanner.nextInt();
+                firstList.add(new Student(id));
+            }
+            else {
                 break;
             }
-            firstList.add(new Student(Integer.parseInt(id)));
         }
-        System.out.println("|Заполнение второго списка студентов|\n00 - конец ввода\n" +
+        scanner = new Scanner(System.in); // очистка
+        System.out.print("|Заполнение второго списка студентов|\nлюбое введенное не число - конец ввода\n" +
                 "Введите id студентов разделяя их пробелом: ");
         while (true) {
-            String id = scanner.nextLine();
-            if (id.equals("00")) {
+            if (scanner.hasNextInt()) {
+                int id = scanner.nextInt();
+                secondList.add(new Student(id));
+            }
+            else {
                 break;
             }
-            secondList.add(new Student(Integer.parseInt(id)));
         }
-        n = StudentSorting.mergeSort(firstList, secondList);
-        System.out.print("Отсортированный массив: ");
-        for (int i : n) {
-            System.out.printf("%s ", i);
+        ArrayList<Student> n = StudentSorting.mergeSort(firstList, secondList);
+        System.out.println("Отсортированный массив:");
+        for (Student i : n) {
+            System.out.printf("%s, id: %s\n", i, i.getId());
         }
+        scanner.close();
     }
 }
