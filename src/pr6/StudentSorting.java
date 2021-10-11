@@ -1,7 +1,7 @@
 package pr6;
 
 public class StudentSorting {
-    public static int[] mergeSort(int[] first, int[] second) {
+    public static int[] mergeSort(Student firstList, Student secondList) {
         return Sort(merge(new int[first.length + second.length], first, second));
     }
 
@@ -25,7 +25,7 @@ public class StudentSorting {
         return merge(n, l, r); // сливает два подмассива
     }
 
-    private static int[] merge(int[] n, int[] l, int[] r) {
+    private static int[] merge(Student n, int[] l, int[] r) {
         int i = 0, j = 0, k = 0;
         // пока не дойдем до конца l или r, выбрать наименьший элемент из l[i] и r[j]
         // и поставить его на правильное место в основном массиве
