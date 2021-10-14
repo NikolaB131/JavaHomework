@@ -1,7 +1,7 @@
-package lab5;
+package lab6;
 
 public class Main {
     public static void main(String[] args) {
-        new Animation();
+        new TextEditor();
     }
 }
