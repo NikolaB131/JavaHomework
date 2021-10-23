@@ -41,7 +41,7 @@ public class Main {
                 }
             }
             System.out.print("\nСыграть еще раз?\nВыбор (y/n): ");
-            if (in.next().equals("n")) {
+            if (!in.next().equals("y")) {
                 break;
             }
         }
