@@ -4,7 +4,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -29,7 +28,7 @@ public class Main {
         }
 
         HashMap<String, String> INNMap = new HashMap<>();
-        String[] lines = dataFromFile.toString().split("\r\n"); // запись каждой строки всего файла в массив строк
+        String[] lines = dataFromFile.toString().split("\r?\n"); // запись каждой строки всего файла в массив строк
         for (String line : lines) {
             INNMap.put(line.substring(0, 12), line.substring(13));
         }
