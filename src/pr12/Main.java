@@ -9,7 +9,7 @@ public class Main {
         person.setSurname("Иванов");
         person.setName("Иван");
         person.setPatronymic("Иванович");
-        person.getFullName();
+        System.out.println(person.getFullName());
 
         System.out.println("\nЗадание 2");
         AddressClassTest.startTest();
@@ -32,9 +32,12 @@ public class Main {
         }
         Shirt[] newShirts = new Shirt[tempShirts.size()];
         newShirts = tempShirts.toArray(newShirts);
-
+        for (Shirt shirt : newShirts) { // вывод
+            System.out.println(shirt + "\n");
+        }
 
         System.out.println("\nЗадание 4");
-        System.out.println("\nЗадание 5");
+        System.out.println(PhoneConverter.convert("+71234567890"));
+        System.out.println(PhoneConverter.convert("81234567890"));
     }
 }
